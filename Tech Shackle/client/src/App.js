@@ -12,6 +12,7 @@ import Admin from './admin/Admin';
 
 const MainSite = ({ match }) => {
   console.log(match);
+  console.log('in main site');
   return (
     <>
       <Navb></Navb>
@@ -27,13 +28,13 @@ const MainSite = ({ match }) => {
             </>
           )}
         />
-        {/* <Route
+        <Route
           render={() => (
             <>
               <div>404 page</div>
             </>
           )}
-        /> */}
+        />
       </Switch>
       <Footer />
     </>
@@ -42,6 +43,7 @@ const MainSite = ({ match }) => {
 
 const AdminSite = ({ match }) => {
   console.log(match);
+  console.log('in admin site');
   return (
     <Switch>
       <Route path={match.url} exact={true} component={Admin} />
@@ -65,8 +67,8 @@ function App() {
   return (
     <div className='Appl'>
       <Switch>
-        <Route path='/' component={MainSite} />
-        <Route path='/admin' component={AdminSite} />
+        <Route exact path='/' component={MainSite} />
+        <Route exact path='/admin' component={AdminSite} />
         <Route
           render={() => (
             <>
