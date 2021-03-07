@@ -8,14 +8,17 @@ import Navbara from './components/Academics/Navbara';
 import Login from './components/Academics/Login';
 import Footera from './components/Academics/Footera';
 import { Route, Switch } from 'react-router';
+import Admin from './admin/Admin';
 
-function App() {
+const MainSite = ({ match }) => {
+  console.log(match);
   return (
-    <div className='Appl'>
+    <>
       <Navb></Navb>
+
       <Switch>
         <Route
-          path='/'
+          path={match.url}
           exact
           render={() => (
             <>
@@ -34,10 +37,26 @@ function App() {
         />
       </Switch>
       <Footer />
+    </>
+  );
+};
 
-      {/* <Navbara/>
-     <Login/> */}
-      {/* <Footera/> */}
+const AdminSite = ({ match }) => {
+  console.log(match);
+  return (
+    <Switch>
+      <Route path={match.url} exact={true} component={Admin} />
+    </Switch>
+  );
+};
+
+function App() {
+  return (
+    <div className='Appl'>
+      <Switch>
+        <Route path='/home' component={MainSite} />
+        <Route path='/admin' component={AdminSite} />
+      </Switch>
     </div>
   );
 }
