@@ -9,7 +9,7 @@ export class Navb extends Component {
         return (
             <div className="front">
                   <div className="topmenu">
-                <Navbar bg="danger" expand="lg" className="n"> 
+                <Navbar bg="info" expand="lg" className="n"> 
 
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav" className="ml">

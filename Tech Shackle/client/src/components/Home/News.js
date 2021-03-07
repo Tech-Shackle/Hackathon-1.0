@@ -1,22 +1,22 @@
 import React, { Component } from 'react'
-import {Card, ListGroup,ListGroupItem,Container,Row,Col,Nav,Navbar,NavDropdown,Button} from 'react-bootstrap'
+import {Card, ListGroup,ListGroupItem,Container,Row,Col,} from 'react-bootstrap'
 import './News.css';
 
 export class News extends Component {
     render() {
         return (
-                <div className="cards">
+                <div className="cards" style={{margin:'30px auto 20px 50px'}}>
            
            <Container>
   <Row>
-    <Col sm={9} style={{padding:'50px 10px 50px 80px'}}>
+    <Col sm={9} >
     <div className="newscolor" >
             <h2>NEWS</h2>
         </div>
     <div className="row">
         
-                    <div className="col-4">
-                    <Card style={{ width: 'auto' }}>
+                    {/* <div className="col-4"> */}
+                    <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src={process.env.PUBLIC_URL+"card1.jpeg"} />
   <Card.Body>
     <Card.Title>Card Title</Card.Title>
@@ -31,10 +31,11 @@ export class News extends Component {
     <Card.Link href="#">Another Link</Card.Link>
   </Card.Body>
 </Card>
+<br/>
 
-                </div>
-                <div className="col-4">
-                <Card style={{ width: 'auto' }}>
+                {/* </div> */}
+                {/* <div className="col-4"> */}
+                <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src={process.env.PUBLIC_URL+"card2.jpg"} />
   <Card.Body>
     <Card.Title>Card Title</Card.Title>
@@ -49,9 +50,10 @@ export class News extends Component {
     <Card.Link href="#">Another Link</Card.Link>
   </Card.Body>
 </Card>
-                </div>
-                <div className="col-4">
-                <Card style={{ width: 'auto' }}>
+<br/>
+                {/* </div>
+                <div className="col-4"> */}
+                <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src={process.env.PUBLIC_URL+"card2.jpg"} />
   <Card.Body>
     <Card.Title>Card Title</Card.Title>
@@ -66,18 +68,19 @@ export class News extends Component {
     <Card.Link href="#">Another Link</Card.Link>
   </Card.Body>
 </Card>
-                </div>
+<br/>
+                {/* </div> */}
                 </div>
 
     </Col>
 
 
-    <Col sm={3} style={{padding:'50px'}}>
+    <Col sm={3} >
         <div className="newscolor">
             <h2>EVENTS</h2>
         </div>
         <div>
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: 'auto' }}>
   <Card.Img variant="top" src={process.env.PUBLIC_URL+"card1.jpeg"} />
   <Card.Body>
     <Card.Title>Card Title</Card.Title>
@@ -92,13 +95,14 @@ export class News extends Component {
     <Card.Link href="#">Another Link</Card.Link>
   </Card.Body>
 </Card>
+<br/>
         </div>
     </Col>
   </Row>
 </Container>
 
 
-<div className="Director">
+{/* <div className="Director"> */}
 <div className="container">
 
             <div>
@@ -108,10 +112,11 @@ export class News extends Component {
                 <div className="row"style={{padding:'30px 20px 10px 60px'}}>
                     <div className="col-4" >
                     <Card style={{ width: '20rem' }}>
-  <Card.Img variant="top" src={process.env.PUBLIC_URL+"principal.jpg"}/>
+  <Card.Img class="img-fluid" variant="top" src={process.env.PUBLIC_URL+"principal.jpg"}/>
 </Card>
+<br/>
                     </div>
-                    <div className="col-7">
+                    <div className="col-7" >
                     <Card>
 
   <Card.Body>
@@ -140,11 +145,11 @@ export class News extends Component {
             </div>
             </div>
 
-</div>  
+{/* </div>   */}
 
 <div>
     <footer>
-    <Navbar bg="light" expand="lg">
+    {/* <Navbar bg="light" expand="lg">
   <Navbar.Brand href="#home">GNDEC-Ludhiana</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
@@ -154,7 +159,7 @@ export class News extends Component {
       
     </Nav>
   </Navbar.Collapse>
-</Navbar>
+</Navbar> */}
     </footer>
 </div>
 
