@@ -27,14 +27,13 @@ const MainSite = ({ match }) => {
             </>
           )}
         />
-
-        <Route
+        {/* <Route
           render={() => (
             <>
               <div>404 page</div>
             </>
           )}
-        />
+        /> */}
       </Switch>
       <Footer />
     </>
@@ -46,6 +45,18 @@ const AdminSite = ({ match }) => {
   return (
     <Switch>
       <Route path={match.url} exact={true} component={Admin} />
+      <Route
+        path={`${match.url}/about`}
+        exact={true}
+        component={() => <div>Hello, in about</div>}
+      />
+      <Route
+        render={() => (
+          <>
+            <div>404 page</div>
+          </>
+        )}
+      />
     </Switch>
   );
 };
@@ -54,8 +65,15 @@ function App() {
   return (
     <div className='Appl'>
       <Switch>
-        <Route path='/home' component={MainSite} />
+        <Route path='/' component={MainSite} />
         <Route path='/admin' component={AdminSite} />
+        <Route
+          render={() => (
+            <>
+              <div>404 page</div>
+            </>
+          )}
+        />
       </Switch>
     </div>
   );
