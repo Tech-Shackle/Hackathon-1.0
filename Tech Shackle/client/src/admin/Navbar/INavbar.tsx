@@ -9,16 +9,16 @@ export const INavBar = ({ setLoggedIn }: any) => {
 
   return (
     <Navbar bg='dark' expand='sm' variant='dark' collapseOnSelect>
-      <Navbar.Brand href='/'>Tech Shackle&#169; Admin</Navbar.Brand>
+      <Navbar.Brand href='/admin'>Tech Shackle&#169; Admin</Navbar.Brand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
       <Navbar.Collapse id='basic-navbar-nav'>
         <Nav className='mr-auto'>
-          <NavLink exact to='/' activeClassName='active' className='nav-link'>
+          <NavLink exact to='/admin' activeClassName='active' className='nav-link'>
             Home
           </NavLink>
           <NavLink
             exact
-            to='/modify'
+            to='admin/modify'
             activeClassName='active'
             className='nav-link'
           >

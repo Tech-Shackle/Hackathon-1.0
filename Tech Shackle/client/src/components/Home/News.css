@@ -4,3 +4,8 @@
     font-family:Georgia,serif;
     margin: 25%,auto,25%,auto; 
 }
+@media only screen and (max-width:320px){
+    .col-7{
+    margin-top: 150px;
+    }
+}

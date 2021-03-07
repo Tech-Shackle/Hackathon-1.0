@@ -9,6 +9,7 @@ import Login from './components/Academics/Login';
 import Footera from './components/Academics/Footera';
 import { Route, Switch } from 'react-router';
 import Admin from './admin/Admin';
+import {AdminLogin} from './admin/Login/AdminLogin'
 
 const MainSite = ({ match }) => {
   console.log(match);
@@ -27,6 +28,11 @@ const MainSite = ({ match }) => {
               <News></News>
             </>
           )}
+        />
+        <Route
+          path={`${match.url}/login`}
+          exact
+          component={AdminLogin}
         />
         <Route
           render={() => (

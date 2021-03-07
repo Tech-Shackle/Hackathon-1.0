@@ -6,12 +6,12 @@ export class MainCarousel extends Component {
     render() {
         return (
             <div>
-                 <div className="slider">
+                 <div className="slider" >
 
 <Carousel fade>
 <Carousel.Item >
 <img
-className="d-block w-100"
+className="d-block w-100 " style={{height:"500px"}}
 src={process.env.PUBLIC_URL+"campus3.jpg"}
 alt="First slide"
 />
@@ -21,7 +21,7 @@ alt="First slide"
 </Carousel.Item>
 <Carousel.Item>
 <img
-className="d-block w-100"
+className="d-block w-100" style={{height:"500px"}}
 src={process.env.PUBLIC_URL+"campus.jpeg"}
 alt="Second slide"
 />
@@ -33,7 +33,7 @@ alt="Second slide"
 </Carousel.Item>
 <Carousel.Item>
 <img
-className="d-block w-100"
+className="d-block w-100" style={{height:"500px"}}
 src={process.env.PUBLIC_URL+"c1.jpg"}
 alt="Third slide"
 />
